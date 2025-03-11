@@ -1,0 +1,3 @@
+[submodule "trip-management"]
+	path = trip-management
+	url = git@github.com:voyage-pi/trip-management.git
