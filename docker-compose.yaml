@@ -2,6 +2,18 @@ include:
   - trip-management/docker-compose.yaml
   - recommendations/docker-compose.yaml
 
+services:
+  reverse-proxy:
+    image: nginx:latest
+    container_name: reverse-proxy
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - voyage
+
 networks:
   voyage:
     driver: bridge
