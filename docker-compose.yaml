@@ -1,0 +1,7 @@
+include:
+  - trip-management/docker-compose.yaml
+  - recommendations/docker-compose.yaml
+
+networks:
+  voyage:
+    driver: bridge
