@@ -4,3 +4,6 @@
 [submodule "recommendations"]
 	path = recommendations
 	url = git@github.com:voyage-pi/recommendations.git
+[submodule "place-wrapper"]
+	path = place-wrapper
+	url = git@github.com:voyage-pi/place-wrapper.git
