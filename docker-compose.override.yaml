@@ -9,3 +9,8 @@ services:
       - "8082:8080"
     networks:
       - voyage
+  place-wrapper:
+    ports:
+      - "8083:8080"
+    networks:
+      - voyage

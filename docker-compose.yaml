@@ -1,6 +1,7 @@
 include:
   - trip-management/docker-compose.yaml
   - recommendations/docker-compose.yaml
+  - place-wrapper/docker-compose.yaml
 
 services:
   reverse-proxy:
