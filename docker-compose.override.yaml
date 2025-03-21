@@ -20,3 +20,7 @@ services:
     networks:
       - voyage
 
+  frontend:
+    networks:
+      - voyage
+

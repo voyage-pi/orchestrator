@@ -2,6 +2,7 @@ include:
   - trip-management/docker-compose.yaml
   - recommendations/docker-compose.yaml
   - place-wrapper/docker-compose.yaml
+  - frontend/docker-compose.yml
 
 services:
   reverse-proxy:
@@ -14,6 +15,11 @@ services:
       - "443:443"
     networks:
       - voyage
+    depends_on:
+      - frontend
+      - trip-management
+      - recommendations
+      - place-wrapper
 
 networks:
   voyage:

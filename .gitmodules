@@ -7,3 +7,6 @@
 [submodule "place-wrapper"]
 	path = place-wrapper
 	url = git@github.com:voyage-pi/place-wrapper.git
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:voyage-pi/frontend.git
