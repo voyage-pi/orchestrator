@@ -1,26 +1,22 @@
+# This override file will be automatically used with docker-compose up
 services:
   trip-management:
-    ports:
-      - "8081:8080"
     networks:
       - voyage
+
   recommendations:
-    ports:
-      - "8082:8080"
     networks:
       - voyage
+
   recommendations_cache:
-    ports:
-      - "6379:6379"
     networks:
       - voyage
+
   place-wrapper:
-    ports:
-      - "8083:8080"
     networks:
       - voyage
+
   place_wrapper_cache:
-    ports:
-      - "6380:6379"
     networks:
       - voyage
+
