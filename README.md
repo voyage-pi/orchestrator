@@ -9,7 +9,6 @@ Also, keep the submodules in the `dev` branch.
 - **Frontend**:
     - From outside the container: `http://localhost:80`
 
-
 - **Trip-Management**:
     - From outside the container: `http://localhost:80/api/v1/trip-management`
     - From another container: `http://trip-management:8080`
@@ -26,4 +25,8 @@ Also, keep the submodules in the `dev` branch.
 
 ```bash
 docker-compose up
+```
+or
+```bash
+docker-compose up -d
 ```
