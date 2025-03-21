@@ -1,7 +1,7 @@
 # Orchestrator
 Service responsible for coordinating the whole system
 
-**IMPORTANT**: The submodules are references to git branches, which means that to get updated code, you need to run `git submodule update --remote --merge` in the root directory.
+**IMPORTANT**: The submodules are references to git branches, which means that to get updated code, you need to run `git submodule update --init --recursive` in the root directory.
 Also, keep the submodules in the `dev` branch.
 
 ### How to acess the multiple services
