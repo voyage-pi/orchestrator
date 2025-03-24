@@ -10,3 +10,6 @@
 [submodule "frontend"]
 	path = frontend
 	url = git@github.com:voyage-pi/frontend.git
+[submodule "maps-wrapper"]
+	path = maps-wrapper
+	url = git@github.com:voyage-pi/maps-wrapper.git
