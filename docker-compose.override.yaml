@@ -3,6 +3,9 @@ services:
   trip-management:
     networks:
       - voyage
+  mongo-trip:
+    networks:
+      - voyage
 
   recommendations:
     networks:
