@@ -23,6 +23,14 @@ services:
     networks:
       - voyage
 
+  maps-wrapper:
+    networks:
+      - voyage
+
+  maps_wrapper_cache:
+    networks:
+      - voyage
+
   frontend:
     networks:
       - voyage
