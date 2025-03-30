@@ -3,6 +3,9 @@ services:
   trip-management:
     networks:
       - voyage
+  mongo-trip:
+    networks:
+      - voyage
 
   recommendations:
     networks:
@@ -17,6 +20,14 @@ services:
       - voyage
 
   place_wrapper_cache:
+    networks:
+      - voyage
+
+  maps-wrapper:
+    networks:
+      - voyage
+
+  maps_wrapper_cache:
     networks:
       - voyage
 
