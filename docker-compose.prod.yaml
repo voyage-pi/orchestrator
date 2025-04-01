@@ -1,0 +1,25 @@
+include:
+  - trip-management/docker-compose.yaml
+  - recommendations/docker-compose.yaml
+  - place-wrapper/docker-compose.yaml
+  - maps-wrapper/docker-compose.yaml
+  - frontend/docker-compose.yml
+
+services:
+  reverse-proxy:
+    build: .
+    container_name: reverse-proxy
+    ports:
+      - "443:443"
+    networks:
+      - voyage
+    depends_on:
+      - frontend
+      - trip-management
+      - recommendations
+      - place-wrapper
+      - maps-wrapper
+
+networks:
+  voyage:
+    driver: bridge

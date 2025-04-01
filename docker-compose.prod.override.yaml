@@ -1,0 +1,55 @@
+# This override file will be automatically used with docker-compose up
+services:
+  trip-management:
+    env_file:
+      - .env
+    networks:
+      - voyage
+  mongo-trip:
+    env_file:
+      - .env
+    networks:
+      - voyage
+
+  recommendations:
+    env_file:
+      - .env
+    networks:
+      - voyage
+
+  recommendations_cache:
+    env_file:
+      - .env
+    networks:
+      - voyage
+
+  place-wrapper:
+    env_file:
+      - .env
+    networks:
+      - voyage
+
+  place_wrapper_cache:
+    env_file:
+      - .env
+    networks:
+      - voyage
+
+  maps-wrapper:
+    env_file:
+      - .env
+    networks:
+      - voyage
+
+  maps_wrapper_cache:
+    env_file:
+      - .env
+    networks:
+      - voyage
+
+  frontend:
+    env_file:
+      - .env
+    networks:
+      - voyage
+
