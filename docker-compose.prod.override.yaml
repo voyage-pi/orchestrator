@@ -47,9 +47,4 @@ services:
     networks:
       - voyage
 
-  frontend:
-    env_file:
-      - .env
-    networks:
-      - voyage
 
