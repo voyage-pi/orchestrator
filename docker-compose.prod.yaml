@@ -3,25 +3,23 @@ include:
   - recommendations/docker-compose.yaml
   - place-wrapper/docker-compose.yaml
   - maps-wrapper/docker-compose.yaml
-  - frontend/docker-compose.yml
 
 services:
   reverse-proxy:
-    image: nginx:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
     container_name: reverse-proxy
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:Z
     ports:
-      - "80:80"
       - "443:443"
     networks:
       - voyage
     depends_on:
-      - frontend
       - trip-management
       - recommendations
       - place-wrapper
       - maps-wrapper
+      - maps_wrapper_cache
 
 networks:
   voyage:
