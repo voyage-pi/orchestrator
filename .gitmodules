@@ -1,15 +1,15 @@
 [submodule "trip-management"]
-	path = trip-management
-	url = git@github.com:voyage-pi/trip-management.git
+        path = trip-management
+        url = git@github.com:voyage-pi/trip-management.git
 [submodule "recommendations"]
-	path = recommendations
-	url = git@github.com:voyage-pi/recommendations.git
-[submodule "place-wrapper"]
-	path = place-wrapper
-	url = git@github.com:voyage-pi/place-wrapper.git
+        path = recommendations
+        url = git@github.com:voyage-pi/recommendations.git
 [submodule "frontend"]
-	path = frontend
-	url = git@github.com:voyage-pi/frontend.git
+        path = frontend
+        url = git@github.com:voyage-pi/frontend.git
 [submodule "maps-wrapper"]
-	path = maps-wrapper
-	url = git@github.com:voyage-pi/maps-wrapper.git
+        path = maps-wrapper
+        url = git@github.com:voyage-pi/maps-wrapper.git
+[submodule "place-wrapper"]
+        path = place-wrapper
+        url = git@github.com:voyage-pi/place-wrapper.git

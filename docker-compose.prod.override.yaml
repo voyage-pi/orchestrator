@@ -3,24 +3,17 @@ services:
   trip-management:
     env_file:
       - .env
-    volumes:
-      - ./trip-management:/app
     networks:
       - voyage
   mongo-trip:
     env_file:
       - .env
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
-      MONGO_INITDB_ROOT_PASSWORD: ${MONGOPASSWORD}
     networks:
       - voyage
 
   recommendations:
     env_file:
       - .env
-    volumes:
-      - ./recommendations/app:/app
     networks:
       - voyage
 
@@ -33,8 +26,6 @@ services:
   place-wrapper:
     env_file:
       - .env
-    volumes:
-      - ./place-wrapper:/app:Z
     networks:
       - voyage
 
@@ -49,8 +40,6 @@ services:
       - .env
     networks:
       - voyage
-    volumes:
-      - ./maps-wrapper/app:/app:Z
 
   maps_wrapper_cache:
     env_file:
@@ -58,12 +47,4 @@ services:
     networks:
       - voyage
 
-  frontend:
-    env_file:
-      - .env
-    volumes:
-      - ./frontend:/ui
-      - /ui/node_modules
-    networks:
-      - voyage
 
