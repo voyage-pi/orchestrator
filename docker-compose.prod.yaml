@@ -19,7 +19,7 @@ services:
       - recommendations
       - place-wrapper
       - maps-wrapper
-      - maps-wrapper-cache
+      - maps_wrapper_cache
 
 networks:
   voyage:
