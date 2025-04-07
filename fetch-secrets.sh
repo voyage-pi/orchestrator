@@ -4,7 +4,7 @@ az login --identity
 
 KEYVAULT_NAME="voyage-vault"
 
-SECRETS=("MONGOPASSWORD" "GOOGLEMAPSAPIKEY")
+SECRETS=("MONGOPASSWORD" "GOOGLEMAPSAPIKEY" "OPENAI")
 
 cat ./config.env > .env
 
