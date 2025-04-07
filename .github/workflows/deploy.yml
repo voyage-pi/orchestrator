@@ -24,10 +24,14 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no voyage@20.199.95.151 << 'EOF'
             cd orchestrator
-            docker-compose down
-            restore .
+            docker compose down
+            git restore .
             git checkout main
             git pull origin main
+            mkdir certs
+            cp ../certs/certificate.crt ./certs/certificate.crt
+            cp ../certs/private.key ./certs/private.key
+            git submodule update --recursive
             chmod +x deploy.sh
             ./deploy.sh
           EOF
