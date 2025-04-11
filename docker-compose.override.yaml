@@ -4,7 +4,7 @@ services:
     env_file:
       - .env
     volumes:
-      - ./trip-management:/app
+      - ./trip-management:/app:Z
     networks:
       - voyage
   mongo-trip:
@@ -20,7 +20,7 @@ services:
     env_file:
       - .env
     volumes:
-      - ./recommendations/app:/app
+      - ./recommendations/app:/app:Z
     networks:
       - voyage
 
@@ -70,7 +70,7 @@ services:
     env_file:
       - .env
     volumes:
-      - ./user-management:/app
+      - ./user-management/app:/app:Z
     networks:
       - voyage
 
