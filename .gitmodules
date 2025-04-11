@@ -13,3 +13,6 @@
 [submodule "place-wrapper"]
         path = place-wrapper
         url = git@github.com:voyage-pi/place-wrapper.git
+[submodule "user-management"]
+	path = user-management
+	url = git@github.com:voyage-pi/user-management.git
