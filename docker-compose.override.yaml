@@ -66,4 +66,11 @@ services:
       - /ui/node_modules
     networks:
       - voyage
+  user-management:
+    env_file:
+      - .env
+    volumes:
+      - ./user-management:/app
+    networks:
+      - voyage
 
