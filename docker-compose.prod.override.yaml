@@ -46,10 +46,4 @@ services:
       - .env
     networks:
       - voyage
-  user-management:
-    env_file:
-      - .env
-    networks:
-      - voyage
-
 
