@@ -15,7 +15,11 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: ${MONGOPASSWORD}
     networks:
       - voyage
-
+  trip-cache:
+    env_file:
+      - .env
+    networks:
+      - voyage
   recommendations:
     env_file:
       - .env

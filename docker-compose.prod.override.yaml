@@ -10,6 +10,11 @@ services:
       - .env
     networks:
       - voyage
+  trip-cache:
+    env_file:
+      - .env
+    networks:
+      - voyage
 
   recommendations:
     env_file:
