@@ -3,7 +3,6 @@ include:
   - recommendations/docker-compose.yaml
   - place-wrapper/docker-compose.yaml
   - maps-wrapper/docker-compose.yaml
-  - user-management/docker-compose.yaml
 
 services:
   reverse-proxy:
@@ -21,7 +20,6 @@ services:
       - place-wrapper
       - maps-wrapper
       - maps_wrapper_cache
-      - user-management
 
 networks:
   voyage:
