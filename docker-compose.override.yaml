@@ -4,7 +4,7 @@ services:
     env_file:
       - .env
     volumes:
-      - ./trip-management:/app
+      - ./trip-management:/app:Z
     networks:
       - voyage
   mongo-trip:
@@ -13,14 +13,23 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGOPASSWORD}
+    volumes:
+      - orchestrator_mongo-data:/data/db
+    restart: always
+    # Add container name to ensure consistent naming
+    container_name: mongo-trip
     networks:
       - voyage
-
+  trip-cache:
+    env_file:
+      - .env
+    networks:
+      - voyage
   recommendations:
     env_file:
       - .env
     volumes:
-      - ./recommendations/app:/app
+      - ./recommendations/app:/app:Z
     networks:
       - voyage
 
@@ -66,4 +75,15 @@ services:
       - /ui/node_modules
     networks:
       - voyage
+  user-management:
+    env_file:
+      - .env
+    volumes:
+      - ./user-management/app:/app:Z
+    networks:
+      - voyage
 
+# Define the volume with explicit configuration
+volumes:
+  orchestrator_mongo-data:
+    external: true

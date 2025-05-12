@@ -25,6 +25,10 @@ Also, keep the submodules in the `dev` branch.
     - From outside the container: `http://localhost:80/api/v1/maps-wrapper`
     - From another container: `http://maps-wrapper:8080`
 
+- **User-Management**
+    - From outside the container: `http://localhost:80/api/v1/user-management`
+    - From another container: `http://user-management:8080`
+
 ### How to run
 
 ```bash
