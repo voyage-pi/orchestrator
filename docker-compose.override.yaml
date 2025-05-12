@@ -13,6 +13,11 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGOPASSWORD}
+    volumes:
+      - orchestrator_mongo-data:/data/db
+    restart: always
+    # Add container name to ensure consistent naming
+    container_name: mongo-trip
     networks:
       - voyage
   trip-cache:
@@ -78,3 +83,7 @@ services:
     networks:
       - voyage
 
+# Define the volume with explicit configuration
+volumes:
+  orchestrator_mongo-data:
+    external: true

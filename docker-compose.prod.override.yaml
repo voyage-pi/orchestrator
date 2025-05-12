@@ -10,6 +10,8 @@ services:
       - .env
     networks:
       - voyage
+    volumes:
+      - orchestrator_mongo-data:/data/db
   trip-cache:
     env_file:
       - .env
@@ -56,5 +58,6 @@ services:
       - .env
     networks:
       - voyage
-
-
+volumes:
+  orchestrator_mongo-data:
+    external: true
