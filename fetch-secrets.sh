@@ -23,8 +23,10 @@ do
   echo "$ENV_NAME=$SECRET_VALUE" >> .env
 done
 
+SUPABASE_URL=$(grep "SUPABASE_URL" .env | cut -d '=' -f2-)
+
 # Create frontend .env file with Vite environment variables
 echo "# Frontend Environment Variables" > ./frontend/ui/.env
 echo "VITE_APP_GOOGLE_MAPS_API_KEY=$(az keyvault secret show --name GOOGLEMAPSAPIKEY --vault-name $KEYVAULT_NAME --query "value" -o tsv)" >> ./frontend/ui/.env
-echo "VITE_SUPABASE_URL=$(az keyvault secret show --name SUPABASEURL --vault-name $KEYVAULT_NAME --query "value" -o tsv)" >> ./frontend/ui/.env
+echo "VITE_SUPABASE_URL=$SUPABASE_URL" >> ./frontend/ui/.env
 echo "VITE_SUPABASE_ANON_KEY=$(az keyvault secret show --name SUPABASEKEY --vault-name $KEYVAULT_NAME --query "value" -o tsv)" >> ./frontend/ui/.env
