@@ -22,6 +22,7 @@ services:
       - maps-wrapper
       - maps_wrapper_cache
       - user-management
+      - mongo-trip
 
 networks:
   voyage:
