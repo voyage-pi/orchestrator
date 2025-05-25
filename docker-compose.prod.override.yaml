@@ -61,6 +61,13 @@ services:
       - .env
     networks:
       - voyage
+
+  landing-page:
+    env_file:
+      - .env
+    networks:
+      - voyage
+
 volumes:
   orchestrator_mongo-data:
     external: true
