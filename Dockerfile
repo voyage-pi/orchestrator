@@ -14,8 +14,8 @@ RUN npm run build
 
 FROM nginx:alpine
 COPY ./nginx.prod.conf /etc/nginx/nginx.conf
-COPY ./certs/certificate.crt /etc/ssl/certificate.crt
-COPY ./certs/private.key /etc/ssl/private.key
+COPY ./certs/voyage_certificate.crt /etc/ssl/voyage_certificate.crt
+COPY ./certs/voyage_private.key /etc/ssl/voyage_private.key
 COPY ./certs/landing_certificate.crt /etc/ssl/landing_certificate.crt
 COPY ./certs/landing_private.key /etc/ssl/landing_private.key
 COPY --from=build-frontend /app/dist /usr/share/nginx/html
