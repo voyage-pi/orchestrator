@@ -5,7 +5,7 @@ on:
     branches:
       - main
     types:
-      - closed  # Trigger when the pull request is closed (i.e., merged)
+      - closed # Trigger when the pull request is closed (i.e., merged)
 
 jobs:
   deploy:
@@ -31,8 +31,9 @@ jobs:
             mkdir certs
             cp ../certs/certificate.crt ./certs/certificate.crt
             cp ../certs/private.key ./certs/private.key
+            cp ../certs/landing_certificate.crt ./certs/landing_certificate.crt
+            cp ../certs/landing_private.key ./certs/landing_private.key
             git submodule update --recursive
             chmod +x deploy.sh
             ./deploy.sh
           EOF
-
