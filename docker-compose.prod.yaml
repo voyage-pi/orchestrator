@@ -4,6 +4,7 @@ include:
   - place-wrapper/docker-compose.yaml
   - maps-wrapper/docker-compose.yaml
   - user-management/docker-compose.yaml
+  - landing-page/docker-compose.yaml
 
 services:
   reverse-proxy:
@@ -23,6 +24,7 @@ services:
       - maps_wrapper_cache
       - user-management
       - mongo-trip
+      - landing-page
 
 networks:
   voyage:

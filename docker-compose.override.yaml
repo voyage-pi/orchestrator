@@ -83,6 +83,15 @@ services:
     networks:
       - voyage
 
+  landing-page:
+    env_file:
+      - .env
+    volumes:
+      - ./landing-page:/app:Z
+      - /app/node_modules
+    networks:
+      - voyage
+
 # Define the volume with explicit configuration
 volumes:
   orchestrator_mongo-data:

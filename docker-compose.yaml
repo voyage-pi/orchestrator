@@ -5,6 +5,7 @@ include:
   - maps-wrapper/docker-compose.yaml
   - frontend/docker-compose.yml
   - user-management/docker-compose.yaml
+  - landing-page/docker-compose.yaml
 
 services:
   reverse-proxy:
@@ -24,6 +25,7 @@ services:
       - place-wrapper
       - maps-wrapper
       - user-management
+      - landing-page
 
 networks:
   voyage:
